@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+
+</head>
+
+
+
+<body>
+    <h1 style="text-align: center;"></h1>
+
+    <script>
+        function soma() {
+            var num1 = Number(document.getElementById('n1').value);
+            var num2 = Number(document.getElementById('n2').value);
+            var resultado = Number(num1 + num2);
+            document.getElementById('n1').value = resultado;
+            document.getElementById('n2').value = "";
+        }
+
+        function sub() {
+            var num1 = Number(document.getElementById('n1').value);
+            var num2 = Number(document.getElementById('n2').value);
+            var resultado = Number(num1 - num2);
+            document.getElementById('n1').value = resultado;
+            document.getElementById('n2').value = "";
+        }
+
+        function x() {
+            var num1 = Number(document.getElementById('n1').value);
+            var num2 = Number(document.getElementById('n2').value);
+            var resultado = Number(num1 * num2);
+            document.getElementById('n1').value = resultado;
+            document.getElementById('n2').value = "";
+        }
+
+        function div() {
+            var num1 = Number(document.getElementById('n1').value);
+            var num2 = Number(document.getElementById('n2').value);
+            var resultado = Number(num1 / num2);
+            document.getElementById('n1').value = resultado;
+            document.getElementById('n2').value = "";
+        }
+
+        function limpar() {
+            document.getElementById('n1').value = "";
+            document.getElementById('n2').value = "";
+
+        }
+    </script>
+
+    <style>
+        body {
+            font-family: arial;
+        }
+        
+        button {
+            border-radius: 50%;
+            border-color: white;
+            background-color: transparent;
+            color: white;
+            cursor: pointer;
+        }
+        
+        .bl {
+            border-radius: 1%;
+            border: 2px solid green;
+            width: 100%;
+            background-color: transparent;
+            color: green;
+            font-size: x-large;
+            transition-duration: 0.4s;
+        }
+        
+        .bl:hover {
+            border-radius: 1%;
+            border: 2px solid green;
+            width: 100%;
+            background-color: rgb(2, 104, 2);
+            color: rgb(209, 228, 209);
+            font-size: x-large;
+            padding: 1% 2%;
+        }
+        
+        fieldset {
+            text-align: center;
+            margin-left: 30%;
+            margin-right: 30%;
+        }
+        
+        .butao {
+            width: 100%;
+            text-align: center;
+            color: aliceblue;
+            background-color: green;
+            transition-duration: 0.4s;
+        }
+        
+        .butao:hover {
+            width: 100%;
+            text-align: center;
+        }
+        
+        .but {
+            font-size: xx-large;
+            width: 15%;
+            height: 70px;
+            transition-duration: 0.4s;
+        }
+        
+        .but:hover {
+            font-size: xx-large;
+            padding: 1% 5%;
+            margin: 1% 5%;
+            color: rgb(3, 61, 3);
+            text-shadow: 20px;
+            box-shadow: 5px;
+            border-color: green;
+        }
+        
+        #label {
+            padding-top: 8px;
+            color: white;
+        }
+    </style>
+
+    <fieldset style="background-image: linear-gradient(green, rgb(127, 190, 127));">
+        <div id="label">
+            <label>N1</label><input type="number" id="n1" />
+            <label>N2</label><input type="number" id="n2" />
+        </div>
+        <br>
+        <div class="butao">
+            <button onclick="soma()" class="but">+</button>
+            <button onclick="sub()" class="but">-</button>
+            <button onclick="x()" class="but">x</button>
+            <button onclick="div()" class="but">/</button></div>
+
+        <button onclick="limpar()" class="bl">limpar</button>
+    </fieldset>
+</body>
+
+</html>
